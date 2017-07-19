@@ -4,13 +4,12 @@ export default Ember.Component.extend({
   ajax: Ember.inject.service('ajax'),
   actions: {
     setThePayload(){
-      console.log('we are setting new payload');
       let ajax = Ember.get(this, 'ajax');
       ajax.setPayload('here is the new payload');
       console.log(ajax.myPayload);
       // let myReuqest = ajax.
       ajax.sendRequest();
-    },
+     },
     // sendRequest() {
     //   return this.get('ajax').request('query', {
     //     host: 'https://api.api.ai',
