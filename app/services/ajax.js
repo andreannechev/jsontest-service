@@ -19,8 +19,8 @@ export default AjaxService.extend({
       data: {query: "lets go", lang: "en", sessionId: "somerandomthing"},
       success: function(data) {
         // var payload = JSON.stringify(data, undefined, 2);
-        let spokenResponse = data.result.speech
-        console.log(spokenResponse);
+        // let spokenResponse = data.result.speech
+        // console.log(spokenResponse);
 
       }
 

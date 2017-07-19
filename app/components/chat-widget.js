@@ -8,7 +8,9 @@ export default Ember.Component.extend({
       ajax.setPayload('here is the new payload');
       console.log(ajax.myPayload);
       // let myReuqest = ajax.
-      ajax.sendRequest();
+      let test = ajax.sendRequest();
+      ajax.setPayload(test);
+      console.log(ajax.myPayload);
      },
     // sendRequest() {
     //   return this.get('ajax').request('query', {
