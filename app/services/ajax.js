@@ -26,6 +26,12 @@ export default AjaxService.extend({
       // .then(function (data) {
       //
       //   });
-    }
+  },
+
+  isDashboard: false,
+
+  setDashboard(state){
+    this.set('isDashboard', state);
+  }
 
 });

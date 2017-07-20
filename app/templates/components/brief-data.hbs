@@ -1,0 +1,9 @@
+<h3>Background Brief Data</h3>
+
+{{#if ajax.isDashboard}}
+{{ajax.myPayload.result.speech}}
+{{else}}
+it is {{ajax.isDashboard}}
+{{/if}}
+
+{{yield}}
