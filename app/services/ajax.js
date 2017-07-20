@@ -8,9 +8,7 @@ export default AjaxService.extend({
     this.set('myPayload', payload);
   },
 
-  // Handle promise
-
-
+  // Return JSON form API.ai as Promise
   sendRequest(userQuery){
       // Will be call from chat widget
       return this.request('query', {
@@ -29,45 +27,5 @@ export default AjaxService.extend({
       //
       //   });
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-  // Method to call ajax
-
-  // sendRequest(userQuery){
-  //     return this.request('query', {
-  //       host: 'https://api.api.ai',
-  //       namespace: 'v1',
-  //       contentType: 'application/json; charset=utf-8',
-  //       headers : {"Authorization": 'Bearer 0f46317926264d0eb3d0eaf804b6831d'},
-  //       method: 'POST',
-  //       data: {query: userQuery, lang: "en", sessionId: "somerandomthing"},
-  //       success: function(data) {
-  //         // console.log(JSON.stringify(data))
-  //         // var name = data.id;
-  //         // console.log(name);
-  //         let myPayload = Ember.get(this, 'myPayload');
-  //
-  //         // Ember.get(this, 'setPayload(data.id)');
-  //         console.log(myPayload);
-  //       }
-  //     });
-  //   }
-
-
-  // getPayload(){
-  //   return this.get('myPayload');
-  // }
-
 
 });

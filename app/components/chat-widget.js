@@ -11,13 +11,10 @@ export default Ember.Component.extend({
 
       //AXAJ call to the Service
       let ajax = Ember.get(this, 'ajax');
-      // ajax.setPayload('here is the new payload');
-      // console.log(ajax.myPayload);
-
-      let test = ajax.sendRequest(userQuery)
+        ajax.sendRequest(userQuery)
       .then(function(data){
-        ajax.setPayload(data.result.speech);
-        console.log(ajax.myPayload);
+        ajax.setPayload(data);
+        console.log(ajax.myPayload.id);
       });
 
       // Cleat user input
