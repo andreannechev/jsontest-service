@@ -2,7 +2,7 @@ import Ember from 'ember';
 import AjaxService from 'ember-ajax/services/ajax';
 
 export default AjaxService.extend({
-  myPayload: null,
+  myPayload: 'null',
 
   setPayload(payload) {
     this.set('myPayload', payload);
@@ -18,10 +18,9 @@ export default AjaxService.extend({
       method: 'POST',
       data: {query: userQuery, lang: "en", sessionId: "somerandomthing"},
       success: function(data) {
-        // var payload = JSON.stringify(data, undefined, 2);
-        // let spokenResponse = data.result.speech
-        // console.log(spokenResponse);
-
+        // console.log(JSON.stringify(data))
+        var name = data.id;
+        console.log(name);
       }
 
     });
