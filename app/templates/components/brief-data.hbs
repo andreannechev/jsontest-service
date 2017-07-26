@@ -1,0 +1,39 @@
+<h3>Background Brief Data</h3>
+
+<!-- Load Dashboard -->
+{{#if ajax.isActive.Dashboard}}
+  <div class="box animate fadeInUp one">
+      Your dashboard is emty
+  </div>
+  <div class="box animate fadeInUp two">
+    <div class="dashboard" id="dashboard">Create new project
+      <div class="image"></div>
+  	</div>
+  </div>
+{{/if}}
+
+<!-- Load New Project Data -->
+{{#if ajax.isActive.NewProject}}
+  <div class="box" class="{{if ajax.isActive.NewProject 'animate fadeInUp one'}}">
+    <div class="{{if ajax.isActive.BrandName 'newProject' 'newProject highlight'}}">Brand name
+
+      {{#if ajax.isActive.BrandName}}
+        <p style="font-size:20px; font-weight:700">{{ajax.myPayload.result.parameters.brandname}}</p>
+        {{else}}
+        <p>Corporate, startup or Institution</p>
+        <img src="images/icon-brand.svg" width="30" height="30">
+      {{/if}}
+      <div class="{{if ajax.isActive.BrandName 'check' 'plus'}}"></div>
+    </div>
+  </div>
+
+  <div class="box animate fadeInUp two">
+    <div class="newProject"class="{{if ajax.isActive.BrandName 'highlight'}}">Project type
+      <p>Logo, Poster, Website etc..</p>
+      <img src="images/icon-product.svg" width="30" height="30">
+      <div class="plus"></div>
+    </div>
+  </div>
+{{/if}}
+
+{{yield}}

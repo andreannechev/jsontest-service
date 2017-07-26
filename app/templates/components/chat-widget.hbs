@@ -1,10 +1,17 @@
 <h1>This is chat widget template</h1>
 
-<div class="">
-      {{input type="text" value=userQuery class="input"  placeholder="type here"}}
-      <button type="button" class="input" style="margin-top:30px" name="button" {{action "setThePayload"}}>SEND</button>
-    </div>
+<div class="other">
+        <span class="user"><img alt="" src="images/user-you.png" /></span>
+        <div class="message">
+            <div id="rec" class="mic"></div>
+            {{input id="speech" class="input" type="text" value=userQuery placeholder="type here" insert-newline="setThePayload"}}
+        </div>
+      </div>
 
-    
+
+
+
+
+
 
 {{yield}}

@@ -1,4 +1,16 @@
-<h2>Bot is answering:</h2>
-{{ajax.myPayload.result.speech}}
+
+<!-- <h2>Bot is answering:</h2> -->
+
+<div id="spokenResponse" class="spoken-response">
+	<div class="ingrid">
+		<span class="user"><img alt="" src="images/ingrid_logo_pos.svg" /></span>
+    <div class="message">
+      <div class="spoken-response__text">{{ajax.myPayload.result.speech}}</div>
+    </div>
+  </div>
+</div>
+
+
+
 
 {{yield}}
