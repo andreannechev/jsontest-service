@@ -12,7 +12,7 @@ export default Ember.Component.extend({
         ajax.sendRequest(userQuery)
       .then(function(data){
         ajax.setPayload(data);
-        console.log(ajax.myPayload);
+        // console.log(ajax.myPayload);
 
         // // Set Dashboard to true
         // if (data.result.action === 'showDashboard'){
@@ -31,6 +31,7 @@ export default Ember.Component.extend({
               break;
             case 'defineBrandName':
             ajax.setBrandName(true);
+            ajax.saveBrandName(true); //save brand name
               break;
             case 'defineProjectType':
             ajax.setProjectType(true);

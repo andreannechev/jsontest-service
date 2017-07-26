@@ -2,11 +2,30 @@ import Ember from 'ember';
 import AjaxService from 'ember-ajax/services/ajax';
 
 export default AjaxService.extend({
+  store: Ember.inject.service(),
+
   myPayload: null,
 
   setPayload(payload) {
     this.set('myPayload', payload);
   },
+
+  // Save Brand name in model
+  saveBrandName() {
+    let store = Ember.get(this, 'store');
+    let brand = this.get('myPayload').result.parameters.brandname;
+    let newBrand = store.createRecord('brand', {
+      brandName: brand,
+    });
+    console.log(this.get('myPayload').result.action);
+  },
+  // savedBrandName: null,
+  // setsavedBrandName(val) {
+  //
+  //   this.set('myPayload', val);
+  // },
+
+
 
   // Return JSON form API.ai as Promise
   sendRequest(userQuery){

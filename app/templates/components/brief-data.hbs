@@ -1,5 +1,6 @@
 <h3>Background Brief Data</h3>
-
+<!-- TRY TO LOAD DATA FROM MODEL brand -->
+<p>{{store.brand.brandName}}</p>
 <!-- Load Dashboard -->
 {{#if ajax.isActive.Dashboard}}
   <div class="box animate fadeInUp one">
@@ -18,7 +19,10 @@
     <div class="{{if ajax.isActive.BrandName 'newProject' 'newProject highlight'}}">Brand name
 
       {{#if ajax.isActive.BrandName}}
-        <p style="font-size:20px; font-weight:700">{{ajax.myPayload.result.parameters.brandname}}</p>
+        <p style="font-size:20px; font-weight:700">
+          {{ajax.myPayload.result.parameters.brandname}}
+        </p>
+
         {{else}}
         <p>Corporate, startup or Institution</p>
         <img src="images/icon-brand.svg" width="30" height="30">
